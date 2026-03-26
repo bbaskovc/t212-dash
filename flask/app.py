@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 
 """
@@ -296,6 +297,9 @@ if __name__ == "__main__":
     thread = web.run_threaded(host="0.0.0.0", port=5000)
 
     logger.info("🚀 Starting application...")
+
+    # Expose app for Gunicorn (Render)
+    app = FlaskHomer().app
 
     # Main application can continue here.
     main_thread()
