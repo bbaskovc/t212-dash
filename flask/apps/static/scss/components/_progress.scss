@@ -1,0 +1,33 @@
+//
+// _progress.scss
+//
+
+.progress-bar {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 5px;
+        right: 0;
+        background-color: rgba(0,0,0,0.2);
+    }
+}
+
+// Custom height
+.progress-sm {
+    height: 5px;
+}
+
+.progress-md {
+    height: 8px;
+}
+
+.progress-lg {
+    height: 12px;
+}
+
+.progress-xl {
+    height: 15px;
+}

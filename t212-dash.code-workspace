@@ -1,0 +1,73 @@
+{
+    // Workspace paths 
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    // Workspace settings 
+    "settings": {
+        // Default terminal
+        "terminal.integrated.defaultProfile.windows": "Command Prompt",
+        "terminal.integrated.defaultProfile.linux": "bash",
+        // Exclude folders from file watcher and search
+        "files.exclude": {
+            ".venv": true
+        },
+        // Editor settings 
+        "editor.rulers": [
+            150
+        ],
+        "editor.formatOnSave": false,
+        "editor.tabSize": 4,
+        // Files associations
+        "files.associations": {},
+        // Python settings         
+        "python.terminal.activateEnvironment": true,
+        "python.terminal.shellIntegration.enabled": false,
+        "python.terminal.executeInFileDir": true,
+        "python.languageServer": "Pylance",
+        "python.analysis.typeCheckingMode": "basic",
+        "python.analysis.diagnosticMode": "workspace",
+        "python.testing.unittestEnabled": false,
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": [
+            "tests"
+        ],
+        "python.analysis.exclude": [
+            ".venv/",
+        ],
+        "python.terminal.launchArgs": [],
+        // File Based Settings
+        "[python]": {
+            "editor.defaultFormatter": "charliermarsh.ruff",
+            "editor.codeActionsOnSave": {
+                "source.organizeImports.ruff": "never",
+                "source.addMissingImports": "always",
+                "source.formatDocument.ruff": "always",
+                "source.fixAll.ruff": "always"
+            },
+        },
+        // Ruff settings 
+        "ruff.importStrategy": "fromEnvironment",
+        "ruff.lint.ignore": [],
+        "ruff.lint.select": [
+            "E",
+            "F"
+        ],
+        "ruff.lineLength": 150,
+        "ruff.exclude": [
+            "tests/**",
+        ],
+    },
+    // Recommended extensions
+    "extensions": {
+        "recommendations": [
+            "streetsidesoftware.code-spell-checker",
+            "ms-vscode.vscode-json",
+            "charliermarsh.ruff",
+            "ms-python.debugpy",
+            "ms-python.python"
+        ]
+    }
+}

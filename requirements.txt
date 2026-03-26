@@ -1,2 +1,6 @@
-flask
-gunicorn
+# Development requirements
+pytest==9.0.1
+pytest-cov==7.0.0
+
+# Include flask application submodule requirements
+-r flask_homer/requirements.txt

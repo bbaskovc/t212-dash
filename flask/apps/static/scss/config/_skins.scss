@@ -1,0 +1,767 @@
+// 
+// All Color Skins
+//
+
+
+// Skin Two Theme Mode
+
+$skin-two-colors: (
+    "primary":   #3498db,
+    "secondary": #9b59b6,
+    "success":   #62cb31,
+    "info":      #23c6c8,
+    "warning":   #ffb606,
+    "danger":    #e74c3c,
+);
+
+@if $skin-two ==true {
+
+    [data-skin="two"] {
+
+        --#{$prefix}chart-primary:                           #3498db;
+        --#{$prefix}chart-primary-rgb:                       #{to-rgb(#3498db)};
+        --#{$prefix}chart-secondary:                         #5dade2;
+        --#{$prefix}chart-secondary-rgb:                     #{to-rgb(#5dade2)};
+        --#{$prefix}chart-gray:                              #e9eaeb;
+        --#{$prefix}chart-gray-rgb:                          #{to-rgb(#e9eaeb)};
+        --#{$prefix}chart-dark:                              #2a7cb0;
+        --#{$prefix}chart-dark-rgb:                          #{to-rgb(#2a7cb0)};
+        --#{$prefix}chart-border-color:                      #ecf4fc;
+        --#{$prefix}chart-title-color:                       #bbcae1;
+
+        // Background Light left-sidebar
+        &[data-sidenav-color="light"] {
+            --#{$prefix}sidenav-bg:                       #{$white};
+            --#{$prefix}sidenav-border-color:             #{$gray-300};
+            --#{$prefix}sidenav-item-color:               #63666a;
+            --#{$prefix}sidenav-item-hover-color:         #23303c;
+            --#{$prefix}sidenav-item-hover-bg:          #f7f9fa;
+            --#{$prefix}sidenav-item-active-color:        #23303c;
+            --#{$prefix}sidenav-item-active-bg:         #f7f9fa;
+            --#{$prefix}sidenav-item-border-color:         #{$gray-300};
+        }
+
+        // Background Gray left-sidebar
+        &[data-sidenav-color="gray"] {
+            --#{$prefix}sidenav-bg:                       #f1f2f7;
+            --#{$prefix}sidenav-border-color:             #e7e9eb;
+            --#{$prefix}sidenav-item-color:               #{$gray-700};
+            --#{$prefix}sidenav-item-hover-color:         #3498db;
+            --#{$prefix}sidenav-item-hover-bg:          #e8f7f4;
+            --#{$prefix}sidenav-item-active-color:        #212b29;
+            --#{$prefix}sidenav-item-active-bg:         #e8e8ed;
+        }
+
+        // Dark Left Sidebar
+        &[data-sidenav-color="dark"] {
+            --#{$prefix}sidenav-bg:                     #28293c;
+            --#{$prefix}sidenav-border-color:           #28293c;
+            --#{$prefix}sidenav-item-color:             #6c7889;
+            --#{$prefix}sidenav-item-hover-color:       #bccee4;
+            --#{$prefix}sidenav-item-hover-bg:          #2f3742;
+            --#{$prefix}sidenav-item-active-color:      #ced6df;
+            --#{$prefix}sidenav-item-active-bg:         #242534;
+        }
+
+        // Dark Mode
+        &[data-bs-theme="dark"][data-sidenav-color="dark"],
+        &[data-bs-theme="dark"][data-sidenav-color="gray"],
+        &[data-bs-theme="dark"][data-sidenav-color="light"] {
+            --#{$prefix}sidenav-bg:                     #1e1f27;
+            --#{$prefix}sidenav-border-color:           #2c2d38;
+            --#{$prefix}sidenav-item-color:             #6c7889;
+            --#{$prefix}sidenav-item-hover-color:       #bccee4;
+            --#{$prefix}sidenav-item-hover-bg:          #2f3742;
+            --#{$prefix}sidenav-item-active-color:      #ced6df;
+            --#{$prefix}sidenav-item-active-bg:         #22232c;
+        }
+
+        // Light Topbar
+        &[data-topbar-color="light"] {
+            --#{$prefix}topbar-bg:                      #ffffff;
+            --#{$prefix}topbar-item-color:                #{$gray-700};
+            --#{$prefix}topbar-item-hover-color:          #3498db;
+            --#{$prefix}topbar-search-bg:                 transparent;
+            --#{$prefix}topbar-search-border:           #e7e9eb;
+        }
+
+        // Gray Topbar
+        &[data-topbar-color="gray"] {
+            --#{$prefix}topbar-bg:                      #f1f2f7;
+            --#{$prefix}topbar-item-color:                #{$gray-700};
+            --#{$prefix}topbar-item-hover-color:          #3498db;
+            --#{$prefix}topbar-search-bg:               #e8e9ef;
+            --#{$prefix}topbar-search-border:           #e8e9ef;
+        }
+
+        // Dark Topbar
+        &[data-topbar-color="dark"] {
+            --#{$prefix}topbar-bg:                      #3498db;
+            --#{$prefix}topbar-item-color:              #e9ecf1;
+            --#{$prefix}topbar-item-hover-color:        #e0eeff;
+            --#{$prefix}topbar-search-bg:               #508ae4;
+            --#{$prefix}topbar-search-border:           #508ae4;
+        }
+
+        // Topbar (Dark Mode)
+        &[data-bs-theme="dark"][data-topbar-color="dark"],
+        &[data-bs-theme="dark"][data-topbar-color="light"],
+        &[data-bs-theme="dark"][data-topbar-color="gray"] {
+            --#{$prefix}topbar-bg:                      #252630;
+            --#{$prefix}topbar-item-color:              #adb5bf;
+            --#{$prefix}topbar-item-hover-color:        #e0eeff;
+            --#{$prefix}topbar-search-bg:               #2d2e3c;
+            --#{$prefix}topbar-search-border:           #2d2e3c;
+        }
+
+        @each $name, $value in $skin-two-colors {
+            --#{$prefix}#{$name}: #{$value};
+        }
+
+        @each $name, $value in $skin-two-colors {
+            --#{$prefix}#{$name}-rgb: #{to-rgb($value)};
+        }
+
+        @each $name, $value in $skin-two-colors {
+            --#{$prefix}#{$name}-bg-subtle: #{rgba($value, 0.15)};
+        }
+
+        @each $name, $value in $skin-two-colors {
+            --#{$prefix}#{$name}-border-subtle: #{rgba($value, 0.3)};
+        }
+
+        @each $name, $value in $skin-two-colors {
+            --#{$prefix}#{$name}-text-emphasis: #{shade-color($value, 25%)};
+        }
+    }
+
+    @if $enable-dark-mode {
+        @include color-mode(dark, true) {
+            &[data-skin="two"] {
+                --#{$prefix}body-bg:                     #{#17181e};
+                --#{$prefix}body-bg-rgb:                 #{to-rgb(#17181e)};
+
+                --#{$prefix}secondary-bg:                #{#1b1c22};
+                --#{$prefix}secondary-bg-rgb:            #{to-rgb(#1b1c22)};
+
+                --#{$prefix}box-shadow:                  #{0px 0px 30px rgba(0, 0, 0, 0.3)};
+
+                --#{$prefix}theme-card-border-color:                 #293036;
+
+                --#{$prefix}chart-gray:                              #40424f;
+                --#{$prefix}chart-gray-rgb:                          #{to-rgb(#40424f)};
+                --#{$prefix}chart-border-color:                      #242c31;
+            }
+        }
+    }
+}
+
+
+// Skin Three Theme Mode
+
+$skin-three-colors: (
+    "primary":   #9b59b6,
+    "secondary": #3498db,
+    "success":   #62cb31,
+    "info":      #23c6c8,
+    "warning":   #ffb606,
+    "danger":    #e74c3c,
+);
+
+@if $skin-three ==true {
+
+    [data-skin="three"] {
+
+        --#{$prefix}chart-primary:                           #9b59b6;
+        --#{$prefix}chart-primary-rgb:                       #{to-rgb(#9b59b6)};
+        --#{$prefix}chart-secondary:                         #b980cc;
+        --#{$prefix}chart-secondary-rgb:                     #{to-rgb(#b980cc)};
+        --#{$prefix}chart-gray:                              #e9eaeb;
+        --#{$prefix}chart-gray-rgb:                          #{to-rgb(#e9eaeb)};
+        --#{$prefix}chart-dark:                              #7f4298;
+        --#{$prefix}chart-dark-rgb:                          #{to-rgb(#7f4298)};
+        --#{$prefix}chart-border-color:                      #ecf4fc;
+        --#{$prefix}chart-title-color:                       #bbcae1;
+
+        // Background Light left-sidebar
+        &[data-sidenav-color="light"] {
+            --#{$prefix}sidenav-bg:                       #{$white};
+            --#{$prefix}sidenav-border-color:             #{$gray-300};
+            --#{$prefix}sidenav-item-color:               #63666a;
+            --#{$prefix}sidenav-item-hover-color:         #23303c;
+            --#{$prefix}sidenav-item-hover-bg:          #f7f9fa;
+            --#{$prefix}sidenav-item-active-color:        #23303c;
+            --#{$prefix}sidenav-item-active-bg:         #f7f9fa;
+            --#{$prefix}sidenav-item-border-color:         #{$gray-300};
+        }
+
+        // Background Gray left-sidebar
+        &[data-sidenav-color="gray"] {
+            --#{$prefix}sidenav-bg:                       #f1f2f7;
+            --#{$prefix}sidenav-border-color:             #e7e9eb;
+            --#{$prefix}sidenav-item-color:               #{$gray-700};
+            --#{$prefix}sidenav-item-hover-color:         #9b59b6;
+            --#{$prefix}sidenav-item-hover-bg:          #e8f7f4;
+            --#{$prefix}sidenav-item-active-color:        #212b29;
+            --#{$prefix}sidenav-item-active-bg:         #e8e8ed;
+        }
+
+        // Dark Left Sidebar
+        &[data-sidenav-color="dark"] {
+            --#{$prefix}sidenav-bg:                     #28293c;
+            --#{$prefix}sidenav-border-color:           #28293c;
+            --#{$prefix}sidenav-item-color:             #6c7889;
+            --#{$prefix}sidenav-item-hover-color:       #bccee4;
+            --#{$prefix}sidenav-item-hover-bg:          #2f3742;
+            --#{$prefix}sidenav-item-active-color:      #ced6df;
+            --#{$prefix}sidenav-item-active-bg:         #242534;
+        }
+
+        // Dark Mode
+        &[data-bs-theme="dark"][data-sidenav-color="dark"],
+        &[data-bs-theme="dark"][data-sidenav-color="gray"],
+        &[data-bs-theme="dark"][data-sidenav-color="light"] {
+            --#{$prefix}sidenav-bg:                     #1e1f27;
+            --#{$prefix}sidenav-border-color:           #2c2d38;
+            --#{$prefix}sidenav-item-color:             #6c7889;
+            --#{$prefix}sidenav-item-hover-color:       #bccee4;
+            --#{$prefix}sidenav-item-hover-bg:          #2f3742;
+            --#{$prefix}sidenav-item-active-color:      #ced6df;
+            --#{$prefix}sidenav-item-active-bg:         #22232c;
+        }
+
+        // Light Topbar
+        &[data-topbar-color="light"] {
+            --#{$prefix}topbar-bg:                      #ffffff;
+            --#{$prefix}topbar-item-color:                #{$gray-700};
+            --#{$prefix}topbar-item-hover-color:          #9b59b6;
+            --#{$prefix}topbar-search-bg:                 transparent;
+            --#{$prefix}topbar-search-border:           #e7e9eb;
+        }
+
+        // Gray Topbar
+        &[data-topbar-color="gray"] {
+            --#{$prefix}topbar-bg:                      #f1f2f7;
+            --#{$prefix}topbar-item-color:                #{$gray-700};
+            --#{$prefix}topbar-item-hover-color:          #9b59b6;
+            --#{$prefix}topbar-search-bg:               #e8e9ef;
+            --#{$prefix}topbar-search-border:           #e8e9ef;
+        }
+
+        // Dark Topbar
+        &[data-topbar-color="dark"] {
+            --#{$prefix}topbar-bg:                      #9b59b6;
+            --#{$prefix}topbar-item-color:              #e9ecf1;
+            --#{$prefix}topbar-item-hover-color:        #e0eeff;
+            --#{$prefix}topbar-search-bg:               #508ae4;
+            --#{$prefix}topbar-search-border:           #508ae4;
+        }
+
+        // Topbar (Dark Mode)
+        &[data-bs-theme="dark"][data-topbar-color="dark"],
+        &[data-bs-theme="dark"][data-topbar-color="light"],
+        &[data-bs-theme="dark"][data-topbar-color="gray"] {
+            --#{$prefix}topbar-bg:                      #252630;
+            --#{$prefix}topbar-item-color:              #adb5bf;
+            --#{$prefix}topbar-item-hover-color:        #e0eeff;
+            --#{$prefix}topbar-search-bg:               #2d2e3c;
+            --#{$prefix}topbar-search-border:           #2d2e3c;
+        }
+
+        @each $name, $value in $skin-three-colors {
+            --#{$prefix}#{$name}: #{$value};
+        }
+
+        @each $name, $value in $skin-three-colors {
+            --#{$prefix}#{$name}-rgb: #{to-rgb($value)};
+        }
+
+        @each $name, $value in $skin-three-colors {
+            --#{$prefix}#{$name}-bg-subtle: #{rgba($value, 0.15)};
+        }
+
+        @each $name, $value in $skin-three-colors {
+            --#{$prefix}#{$name}-border-subtle: #{rgba($value, 0.3)};
+        }
+
+        @each $name, $value in $skin-three-colors {
+            --#{$prefix}#{$name}-text-emphasis: #{shade-color($value, 25%)};
+        }
+    }
+
+    @if $enable-dark-mode {
+        @include color-mode(dark, true) {
+            &[data-skin="three"] {
+                --#{$prefix}body-bg:                     #{#17181e};
+                --#{$prefix}body-bg-rgb:                 #{to-rgb(#17181e)};
+
+                --#{$prefix}secondary-bg:                #{#1b1c22};
+                --#{$prefix}secondary-bg-rgb:            #{to-rgb(#1b1c22)};
+
+                --#{$prefix}box-shadow:                  #{0px 0px 30px rgba(0, 0, 0, 0.3)};
+
+                --#{$prefix}theme-card-border-color:                 #293036;
+                --#{$prefix}chart-gray:                              #40424f;
+                --#{$prefix}chart-gray-rgb:                          #{to-rgb(#40424f)};
+                --#{$prefix}chart-border-color:                      #242c31;
+            }
+        }
+    }
+}
+
+
+// Skin Four Theme Mode
+
+$skin-four-colors: (
+    "primary":   #23c6c8,
+    "secondary": #9b59b6,
+    "success":   #62cb31,
+    "info":      #3498db,
+    "warning":   #ffb606,
+    "danger":    #e74c3c,
+);
+
+@if $skin-four ==true {
+
+    [data-skin="four"] {
+
+        --#{$prefix}chart-primary:                           #23c6c8;
+        --#{$prefix}chart-primary-rgb:                       #{to-rgb(#23c6c8)};
+        --#{$prefix}chart-secondary:                         #50d1d3;
+        --#{$prefix}chart-secondary-rgb:                     #{to-rgb(#50d1d3)};
+        --#{$prefix}chart-gray:                              #e9eaeb;
+        --#{$prefix}chart-gray-rgb:                          #{to-rgb(#e9eaeb)};
+        --#{$prefix}chart-dark:                              #1da2a4;
+        --#{$prefix}chart-dark-rgb:                          #{to-rgb(#1da2a4)};
+        --#{$prefix}chart-border-color:                      #ecf4fc;
+        --#{$prefix}chart-title-color:                       #bbcae1;
+
+        // Background Light left-sidebar
+        &[data-sidenav-color="light"] {
+            --#{$prefix}sidenav-bg:                       #{$white};
+            --#{$prefix}sidenav-border-color:             #{$gray-300};
+            --#{$prefix}sidenav-item-color:               #63666a;
+            --#{$prefix}sidenav-item-hover-color:         #23303c;
+            --#{$prefix}sidenav-item-hover-bg:          #f7f9fa;
+            --#{$prefix}sidenav-item-active-color:        #23303c;
+            --#{$prefix}sidenav-item-active-bg:         #f7f9fa;
+            --#{$prefix}sidenav-item-border-color:         #{$gray-300};
+        }
+
+        // Background Gray left-sidebar
+        &[data-sidenav-color="gray"] {
+            --#{$prefix}sidenav-bg:                       #f1f2f7;
+            --#{$prefix}sidenav-border-color:             #e7e9eb;
+            --#{$prefix}sidenav-item-color:               #{$gray-700};
+            --#{$prefix}sidenav-item-hover-color:         #23c6c8;
+            --#{$prefix}sidenav-item-hover-bg:          #e8f7f4;
+            --#{$prefix}sidenav-item-active-color:        #212b29;
+            --#{$prefix}sidenav-item-active-bg:         #e8e8ed;
+        }
+
+        // Dark Left Sidebar
+        &[data-sidenav-color="dark"] {
+            --#{$prefix}sidenav-bg:                     #28293c;
+            --#{$prefix}sidenav-border-color:           #28293c;
+            --#{$prefix}sidenav-item-color:             #6c7889;
+            --#{$prefix}sidenav-item-hover-color:       #bccee4;
+            --#{$prefix}sidenav-item-hover-bg:          #2f3742;
+            --#{$prefix}sidenav-item-active-color:      #ced6df;
+            --#{$prefix}sidenav-item-active-bg:         #242534;
+        }
+
+        // Dark Mode
+        &[data-bs-theme="dark"][data-sidenav-color="dark"],
+        &[data-bs-theme="dark"][data-sidenav-color="gray"],
+        &[data-bs-theme="dark"][data-sidenav-color="light"] {
+            --#{$prefix}sidenav-bg:                     #1e1f27;
+            --#{$prefix}sidenav-border-color:           #2c2d38;
+            --#{$prefix}sidenav-item-color:             #6c7889;
+            --#{$prefix}sidenav-item-hover-color:       #bccee4;
+            --#{$prefix}sidenav-item-hover-bg:          #2f3742;
+            --#{$prefix}sidenav-item-active-color:      #ced6df;
+            --#{$prefix}sidenav-item-active-bg:         #22232c;
+        }
+
+        // Light Topbar
+        &[data-topbar-color="light"] {
+            --#{$prefix}topbar-bg:                      #ffffff;
+            --#{$prefix}topbar-item-color:                #{$gray-700};
+            --#{$prefix}topbar-item-hover-color:          #23c6c8;
+            --#{$prefix}topbar-search-bg:                 transparent;
+            --#{$prefix}topbar-search-border:           #e7e9eb;
+        }
+
+        // Gray Topbar
+        &[data-topbar-color="gray"] {
+            --#{$prefix}topbar-bg:                      #f1f2f7;
+            --#{$prefix}topbar-item-color:                #{$gray-700};
+            --#{$prefix}topbar-item-hover-color:          #23c6c8;
+            --#{$prefix}topbar-search-bg:               #e8e9ef;
+            --#{$prefix}topbar-search-border:           #e8e9ef;
+        }
+
+        // Dark Topbar
+        &[data-topbar-color="dark"] {
+            --#{$prefix}topbar-bg:                      #23c6c8;
+            --#{$prefix}topbar-item-color:              #e9ecf1;
+            --#{$prefix}topbar-item-hover-color:        #e0eeff;
+            --#{$prefix}topbar-search-bg:               #508ae4;
+            --#{$prefix}topbar-search-border:           #508ae4;
+        }
+
+        // Topbar (Dark Mode)
+        &[data-bs-theme="dark"][data-topbar-color="dark"],
+        &[data-bs-theme="dark"][data-topbar-color="light"],
+        &[data-bs-theme="dark"][data-topbar-color="gray"] {
+            --#{$prefix}topbar-bg:                      #252630;
+            --#{$prefix}topbar-item-color:              #adb5bf;
+            --#{$prefix}topbar-item-hover-color:        #e0eeff;
+            --#{$prefix}topbar-search-bg:               #2d2e3c;
+            --#{$prefix}topbar-search-border:           #2d2e3c;
+        }
+
+        @each $name, $value in $skin-four-colors {
+            --#{$prefix}#{$name}: #{$value};
+        }
+
+        @each $name, $value in $skin-four-colors {
+            --#{$prefix}#{$name}-rgb: #{to-rgb($value)};
+        }
+
+        @each $name, $value in $skin-four-colors {
+            --#{$prefix}#{$name}-bg-subtle: #{rgba($value, 0.15)};
+        }
+
+        @each $name, $value in $skin-four-colors {
+            --#{$prefix}#{$name}-border-subtle: #{rgba($value, 0.3)};
+        }
+
+        @each $name, $value in $skin-four-colors {
+            --#{$prefix}#{$name}-text-emphasis: #{shade-color($value, 25%)};
+        }
+    }
+
+    @if $enable-dark-mode {
+        @include color-mode(dark, true) {
+            &[data-skin="four"] {
+                --#{$prefix}body-bg:                     #{#17181e};
+                --#{$prefix}body-bg-rgb:                 #{to-rgb(#17181e)};
+
+                --#{$prefix}secondary-bg:                #{#1b1c22};
+                --#{$prefix}secondary-bg-rgb:            #{to-rgb(#1b1c22)};
+
+                --#{$prefix}box-shadow:                  #{0px 0px 30px rgba(0, 0, 0, 0.3)};
+
+                --#{$prefix}theme-card-border-color:                 #293036;
+                --#{$prefix}chart-gray:                              #40424f;
+                --#{$prefix}chart-gray-rgb:                          #{to-rgb(#40424f)};
+                --#{$prefix}chart-border-color:                      #242c31;
+            }
+        }
+    }
+}
+
+// Skin Five Theme Mode
+
+$skin-five-colors: (
+    "primary":   #e74c3c,
+    "secondary": #9b59b6,
+    "success":   #62cb31,
+    "info":      #23c6c8,
+    "warning":   #ffb606,
+    "danger":    #3498db,
+);
+
+@if $skin-five ==true {
+
+    [data-skin="five"] {
+
+        --#{$prefix}chart-primary:                           #e74c3c;
+        --#{$prefix}chart-primary-rgb:                       #{to-rgb(#e74c3c)};
+        --#{$prefix}chart-secondary:                         #ec7163;
+        --#{$prefix}chart-secondary-rgb:                     #{to-rgb(#ec7163)};
+        --#{$prefix}chart-gray:                              #e9eaeb;
+        --#{$prefix}chart-gray-rgb:                          #{to-rgb(#e9eaeb)};
+        --#{$prefix}chart-dark:                              #bf3f32;
+        --#{$prefix}chart-dark-rgb:                          #{to-rgb(#bf3f32)};
+        --#{$prefix}chart-border-color:                      #ecf4fc;
+        --#{$prefix}chart-title-color:                       #bbcae1;
+
+        // Background Light left-sidebar
+        &[data-sidenav-color="light"] {
+            --#{$prefix}sidenav-bg:                       #{$white};
+            --#{$prefix}sidenav-border-color:             #{$gray-300};
+            --#{$prefix}sidenav-item-color:               #63666a;
+            --#{$prefix}sidenav-item-hover-color:         #23303c;
+            --#{$prefix}sidenav-item-hover-bg:          #f7f9fa;
+            --#{$prefix}sidenav-item-active-color:        #23303c;
+            --#{$prefix}sidenav-item-active-bg:         #f7f9fa;
+            --#{$prefix}sidenav-item-border-color:         #{$gray-300};
+        }
+
+        // Background Gray left-sidebar
+        &[data-sidenav-color="gray"] {
+            --#{$prefix}sidenav-bg:                       #f1f2f7;
+            --#{$prefix}sidenav-border-color:             #e7e9eb;
+            --#{$prefix}sidenav-item-color:               #{$gray-700};
+            --#{$prefix}sidenav-item-hover-color:         #e74c3c;
+            --#{$prefix}sidenav-item-hover-bg:          #e8f7f4;
+            --#{$prefix}sidenav-item-active-color:        #212b29;
+            --#{$prefix}sidenav-item-active-bg:         #e8e8ed;
+        }
+
+        // Dark Left Sidebar
+        &[data-sidenav-color="dark"] {
+            --#{$prefix}sidenav-bg:                     #28293c;
+            --#{$prefix}sidenav-border-color:           #28293c;
+            --#{$prefix}sidenav-item-color:             #6c7889;
+            --#{$prefix}sidenav-item-hover-color:       #bccee4;
+            --#{$prefix}sidenav-item-hover-bg:          #2f3742;
+            --#{$prefix}sidenav-item-active-color:      #ced6df;
+            --#{$prefix}sidenav-item-active-bg:         #242534;
+        }
+
+        // Dark Mode
+        &[data-bs-theme="dark"][data-sidenav-color="dark"],
+        &[data-bs-theme="dark"][data-sidenav-color="gray"],
+        &[data-bs-theme="dark"][data-sidenav-color="light"] {
+            --#{$prefix}sidenav-bg:                     #1e1f27;
+            --#{$prefix}sidenav-border-color:           #2c2d38;
+            --#{$prefix}sidenav-item-color:             #6c7889;
+            --#{$prefix}sidenav-item-hover-color:       #bccee4;
+            --#{$prefix}sidenav-item-hover-bg:          #2f3742;
+            --#{$prefix}sidenav-item-active-color:      #ced6df;
+            --#{$prefix}sidenav-item-active-bg:         #22232c;
+        }
+
+        // Light Topbar
+        &[data-topbar-color="light"] {
+            --#{$prefix}topbar-bg:                      #ffffff;
+            --#{$prefix}topbar-item-color:                #{$gray-700};
+            --#{$prefix}topbar-item-hover-color:          #e74c3c;
+            --#{$prefix}topbar-search-bg:                 transparent;
+            --#{$prefix}topbar-search-border:           #e7e9eb;
+        }
+
+        // Gray Topbar
+        &[data-topbar-color="gray"] {
+            --#{$prefix}topbar-bg:                      #f1f2f7;
+            --#{$prefix}topbar-item-color:                #{$gray-700};
+            --#{$prefix}topbar-item-hover-color:          #e74c3c;
+            --#{$prefix}topbar-search-bg:               #e8e9ef;
+            --#{$prefix}topbar-search-border:           #e8e9ef;
+        }
+
+        // Dark Topbar
+        &[data-topbar-color="dark"] {
+            --#{$prefix}topbar-bg:                      #e74c3c;
+            --#{$prefix}topbar-item-color:              #e9ecf1;
+            --#{$prefix}topbar-item-hover-color:        #e0eeff;
+            --#{$prefix}topbar-search-bg:               #508ae4;
+            --#{$prefix}topbar-search-border:           #508ae4;
+        }
+
+        // Topbar (Dark Mode)
+        &[data-bs-theme="dark"][data-topbar-color="dark"],
+        &[data-bs-theme="dark"][data-topbar-color="light"],
+        &[data-bs-theme="dark"][data-topbar-color="gray"] {
+            --#{$prefix}topbar-bg:                      #252630;
+            --#{$prefix}topbar-item-color:              #adb5bf;
+            --#{$prefix}topbar-item-hover-color:        #e0eeff;
+            --#{$prefix}topbar-search-bg:               #2d2e3c;
+            --#{$prefix}topbar-search-border:           #2d2e3c;
+        }
+
+        @each $name, $value in $skin-five-colors {
+            --#{$prefix}#{$name}: #{$value};
+        }
+
+        @each $name, $value in $skin-five-colors {
+            --#{$prefix}#{$name}-rgb: #{to-rgb($value)};
+        }
+
+        @each $name, $value in $skin-five-colors {
+            --#{$prefix}#{$name}-bg-subtle: #{rgba($value, 0.15)};
+        }
+
+        @each $name, $value in $skin-five-colors {
+            --#{$prefix}#{$name}-border-subtle: #{rgba($value, 0.3)};
+        }
+
+        @each $name, $value in $skin-five-colors {
+            --#{$prefix}#{$name}-text-emphasis: #{shade-color($value, 25%)};
+        }
+    }
+
+    @if $enable-dark-mode {
+        @include color-mode(dark, true) {
+            &[data-skin="five"] {
+                --#{$prefix}body-bg:                     #{#17181e};
+                --#{$prefix}body-bg-rgb:                 #{to-rgb(#17181e)};
+
+                --#{$prefix}secondary-bg:                #{#1b1c22};
+                --#{$prefix}secondary-bg-rgb:            #{to-rgb(#1b1c22)};
+
+                --#{$prefix}box-shadow:                  #{0px 0px 30px rgba(0, 0, 0, 0.3)};
+
+                --#{$prefix}theme-card-border-color:                 #293036;
+                --#{$prefix}chart-gray:                              #40424f;
+                --#{$prefix}chart-gray-rgb:                          #{to-rgb(#40424f)};
+                --#{$prefix}chart-border-color:                      #242c31;
+            }
+        }
+    }
+}
+
+// Skin Six Theme Mode
+
+$skin-six-colors: (
+    "primary":   #ffb606,
+    "secondary": #9b59b6,
+    "success":   #62cb31,
+    "info":      #23c6c8,
+    "warning":   #3498db,
+    "danger":    #e74c3c,
+);
+
+@if $skin-six ==true {
+
+    [data-skin="six"] {
+
+        --#{$prefix}chart-primary:                           #ffb606;
+        --#{$prefix}chart-primary-rgb:                       #{to-rgb(#ffb606)};
+        --#{$prefix}chart-secondary:                         #ffca40;
+        --#{$prefix}chart-secondary-rgb:                     #{to-rgb(#ffca40)};
+        --#{$prefix}chart-gray:                              #e9eaeb;
+        --#{$prefix}chart-gray-rgb:                          #{to-rgb(#e9eaeb)};
+        --#{$prefix}chart-dark:                              #cc9305;
+        --#{$prefix}chart-dark-rgb:                          #{to-rgb(#cc9305)};
+        --#{$prefix}chart-border-color:                      #ecf4fc;
+        --#{$prefix}chart-title-color:                       #bbcae1;
+
+        // Background Light left-sidebar
+        &[data-sidenav-color="light"] {
+            --#{$prefix}sidenav-bg:                       #{$white};
+            --#{$prefix}sidenav-border-color:             #{$gray-300};
+            --#{$prefix}sidenav-item-color:               #63666a;
+            --#{$prefix}sidenav-item-hover-color:         #23303c;
+            --#{$prefix}sidenav-item-hover-bg:          #f7f9fa;
+            --#{$prefix}sidenav-item-active-color:        #23303c;
+            --#{$prefix}sidenav-item-active-bg:         #f7f9fa;
+            --#{$prefix}sidenav-item-border-color:         #{$gray-300};
+        }
+
+        // Background Gray left-sidebar
+        &[data-sidenav-color="gray"] {
+            --#{$prefix}sidenav-bg:                       #f1f2f7;
+            --#{$prefix}sidenav-border-color:             #e7e9eb;
+            --#{$prefix}sidenav-item-color:               #{$gray-700};
+            --#{$prefix}sidenav-item-hover-color:         #ffb606;
+            --#{$prefix}sidenav-item-hover-bg:          #e8f7f4;
+            --#{$prefix}sidenav-item-active-color:        #212b29;
+            --#{$prefix}sidenav-item-active-bg:         #e8e8ed;
+        }
+
+        // Dark Left Sidebar
+        &[data-sidenav-color="dark"] {
+            --#{$prefix}sidenav-bg:                     #28293c;
+            --#{$prefix}sidenav-border-color:           #28293c;
+            --#{$prefix}sidenav-item-color:             #6c7889;
+            --#{$prefix}sidenav-item-hover-color:       #bccee4;
+            --#{$prefix}sidenav-item-hover-bg:          #2f3742;
+            --#{$prefix}sidenav-item-active-color:      #ced6df;
+            --#{$prefix}sidenav-item-active-bg:         #242534;
+        }
+
+        // Dark Mode
+        &[data-bs-theme="dark"][data-sidenav-color="dark"],
+        &[data-bs-theme="dark"][data-sidenav-color="gray"],
+        &[data-bs-theme="dark"][data-sidenav-color="light"] {
+            --#{$prefix}sidenav-bg:                     #1e1f27;
+            --#{$prefix}sidenav-border-color:           #2c2d38;
+            --#{$prefix}sidenav-item-color:             #6c7889;
+            --#{$prefix}sidenav-item-hover-color:       #bccee4;
+            --#{$prefix}sidenav-item-hover-bg:          #2f3742;
+            --#{$prefix}sidenav-item-active-color:      #ced6df;
+            --#{$prefix}sidenav-item-active-bg:         #22232c;
+        }
+
+        // Light Topbar
+        &[data-topbar-color="light"] {
+            --#{$prefix}topbar-bg:                      #ffffff;
+            --#{$prefix}topbar-item-color:                #{$gray-700};
+            --#{$prefix}topbar-item-hover-color:          #ffb606;
+            --#{$prefix}topbar-search-bg:                 transparent;
+            --#{$prefix}topbar-search-border:           #e7e9eb;
+        }
+
+        // Gray Topbar
+        &[data-topbar-color="gray"] {
+            --#{$prefix}topbar-bg:                      #f1f2f7;
+            --#{$prefix}topbar-item-color:                #{$gray-700};
+            --#{$prefix}topbar-item-hover-color:          #ffb606;
+            --#{$prefix}topbar-search-bg:               #e8e9ef;
+            --#{$prefix}topbar-search-border:           #e8e9ef;
+        }
+
+        // Dark Topbar
+        &[data-topbar-color="dark"] {
+            --#{$prefix}topbar-bg:                      #ffb606;
+            --#{$prefix}topbar-item-color:              #e9ecf1;
+            --#{$prefix}topbar-item-hover-color:        #e0eeff;
+            --#{$prefix}topbar-search-bg:               #508ae4;
+            --#{$prefix}topbar-search-border:           #508ae4;
+        }
+
+        // Topbar (Dark Mode)
+        &[data-bs-theme="dark"][data-topbar-color="dark"],
+        &[data-bs-theme="dark"][data-topbar-color="light"],
+        &[data-bs-theme="dark"][data-topbar-color="gray"] {
+            --#{$prefix}topbar-bg:                      #252630;
+            --#{$prefix}topbar-item-color:              #adb5bf;
+            --#{$prefix}topbar-item-hover-color:        #e0eeff;
+            --#{$prefix}topbar-search-bg:               #2d2e3c;
+            --#{$prefix}topbar-search-border:           #2d2e3c;
+        }
+
+        @each $name, $value in $skin-six-colors {
+            --#{$prefix}#{$name}: #{$value};
+        }
+
+        @each $name, $value in $skin-six-colors {
+            --#{$prefix}#{$name}-rgb: #{to-rgb($value)};
+        }
+
+        @each $name, $value in $skin-six-colors {
+            --#{$prefix}#{$name}-bg-subtle: #{rgba($value, 0.15)};
+        }
+
+        @each $name, $value in $skin-six-colors {
+            --#{$prefix}#{$name}-border-subtle: #{rgba($value, 0.3)};
+        }
+
+        @each $name, $value in $skin-six-colors {
+            --#{$prefix}#{$name}-text-emphasis: #{shade-color($value, 25%)};
+        }
+    }
+
+    @if $enable-dark-mode {
+        @include color-mode(dark, true) {
+            &[data-skin="six"] {
+                --#{$prefix}body-bg:                     #{#17181e};
+                --#{$prefix}body-bg-rgb:                 #{to-rgb(#17181e)};
+
+                --#{$prefix}secondary-bg:                #{#1b1c22};
+                --#{$prefix}secondary-bg-rgb:            #{to-rgb(#1b1c22)};
+
+                --#{$prefix}box-shadow:                  #{0px 0px 30px rgba(0, 0, 0, 0.3)};
+
+                --#{$prefix}theme-card-border-color:                 #293036;
+                --#{$prefix}chart-gray:                              #40424f;
+                --#{$prefix}chart-gray-rgb:                          #{to-rgb(#40424f)};
+                --#{$prefix}chart-border-color:                      #242c31;
+            }
+        }
+    }
+}

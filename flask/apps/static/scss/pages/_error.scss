@@ -1,0 +1,29 @@
+//
+// _error.scss
+//
+
+.shadow-dance-text {
+    font-size: 5rem;
+    font-weight: $font-weight-bold;
+    color: var(--#{$prefix}primary);
+    text-shadow: 3px 3px 0 var(--#{$prefix}danger), 6px 6px 0 var(--#{$prefix}secondary);
+    animation: shadow-dance 2s infinite;
+}
+
+@keyframes shadow-dance {
+    0%, 100% {
+        text-shadow: 3px 3px 0 var(--#{$prefix}danger), 6px 6px 0 var(--#{$prefix}secondary);
+    }
+    50% {
+        text-shadow: -3px -3px 0 var(--#{$prefix}secondary), -6px -6px 0 var(--#{$prefix}danger);
+    }
+}
+
+// Gradient Text
+.error-text-alt {
+    .error-wave-char {
+        background: radial-gradient(circle, $warning 0%, $danger 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

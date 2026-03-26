@@ -1,0 +1,145 @@
+//
+// _layout.scss
+//
+
+// Wrapper
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+// Content Page
+.content-page {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: $sidenav-width;
+    min-height: calc(100vh - #{calc($topbar-height + 7px)});
+    transition: $transition-base;
+    padding: 0 calc($grid-gutter-width * 0.5);
+
+    @include media-breakpoint-up(xxl) {
+        padding: 0 50px;
+    }
+}
+
+// Page Head
+.page-title-head {
+    min-height: 40px;
+    background-color: $card-bg;
+    margin: $spacer 0;
+    border-radius: var(--#{$prefix}border-radius);
+    padding: $spacer;
+    border: 1px solid var(--#{$prefix}border-color);
+    transition: margin 0.35s ease-in-out, width 0.35s ease-in-out;
+
+    #btn-page-head .btn-page-head-icon {
+        transition: rotate 0.3s ease;
+    }
+
+    &.active {
+        margin: 0 calc($grid-gutter-width * -1) $spacer;
+        border-radius: 0;
+        border-width: 0 0 1px 0;
+
+        @include media-breakpoint-up(xxl) {
+            margin: 0 calc($grid-gutter-width * -0.5 - 50px) $spacer;
+        }
+
+        #btn-page-head .btn-page-head-icon {
+            rotate: 180deg;
+        }
+    }
+
+    .btn-page-head-icon {
+        animation: bounceLoop 1s ease-in-out infinite;
+    }
+}
+
+@keyframes bounceLoop {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+
+
+// Logo Height
+.logo-lg {
+    img {
+        height: $logo-lg-height;
+    }
+}
+
+.logo-sm {
+    img {
+        height: $logo-sm-height;
+    }
+}
+
+// Sidebar Logo
+.logo {
+    display: block;
+    top: 0;
+    position: sticky;
+    line-height: $topbar-height;
+    padding: 0 12px;
+
+    span.logo-lg {
+        display: block;
+    }
+
+    span.logo-sm {
+        display: none;
+    }
+
+    &.logo-light {
+        display: none;
+    }
+
+    &.logo-dark {
+        display: block;
+    }
+}
+
+html[data-sidenav-color="dark"],
+html[data-bs-theme="dark"],
+html[data-sidenav-color="light"][data-topbar-color="dark"] {
+
+    .logo {
+        &.logo-light {
+            display: block;
+        }
+
+        &.logo-dark {
+            display: none;
+        }
+    }
+}
+
+//
+// SCROLLABLE LAYOUT
+//
+
+@include media-breakpoint-up(lg) {
+    html[data-layout-position="scrollable"] {
+        .content-page {
+            position: relative;
+        }
+
+        .sidenav-menu {
+            position: absolute;
+        }
+
+        .logo,
+        .app-topbar {
+            position: static;
+        }
+    }
+}
